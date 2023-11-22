@@ -13,6 +13,7 @@
   <script
     src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection/dist/mediapipe-facemesh.esm.min.js"></script>
   <script src="face-api.min.js"></script>
+  <script src="finalaudio.py"></script>
   <title>Quiz</title>
   <!-- FontAwesome-cdn include -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -33,7 +34,7 @@
       padding: 0;
       width: 100vw;
       height: 100vh;
-      display: flex;
+   
       justify-content: flex-start;
       align-items: flex-end;
       overflow-y: scroll;
@@ -43,7 +44,7 @@
 
     #canvas-container {
       position: absolute;
-      bottom: 20px;
+      top: 20px;
       left: 20px;
       width: 200px;
       height: 200px;
@@ -74,12 +75,13 @@
       border: 2px solid #ddd;
       border-radius: 8px;
       padding: 10px;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      margin-right: 20px;
       max-width: 80%;
       word-wrap: break-word;
       animation: fadeIn 0.5s ease-in-out;
       position: fixed;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
     }
 
@@ -322,19 +324,17 @@
         integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
         crossorigin="anonymous"></script>
      <!-- jQuery-js include -->
-     <script src="version-4\assets\js\jquery-3.6.0.min.js"></script>
-     <!-- Bootstrap-js include -->
-     <script src="version-4\assets\js\bootstrap.min.js"></script>
-     <!-- jQuery-validate-js include -->
-     <script src="version-4\assets\js\jquery.validate.min.js"></script>
+      <script src="version-4\assets\js\jquery-3.6.0.min.js"></script>
+      <!-- Bootstrap-js include -->
+      <script src="version-4\assets\js\bootstrap.min.js"></script>
+      <!-- jQuery-validate-js include -->
+      <script src="version-4\assets\js\jquery.validate.min.js"></script>
      <!-- jQuery-countUp-js include -->
-     <script src="version-4\assets\js\countdown.js"></script>
+      <script src="version-4\assets\js\countdown.js"></script>
      <!-- Custom-js include -->
-     <script src="version-4\assets\js\script.js"></script>
+      <script src="version-4\assets\js\script.js"></script>
    
-    <script src = "script.js"></script>
-    <script src="finalaudio.py"></script>
-    <script src="index">
+      <script src = "script.js">
       const socket = io('http://localhost:5500');
       socket.on('hello from server', (...args) => {
         console.log('hello from server', ...args)
